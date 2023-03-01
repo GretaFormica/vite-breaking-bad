@@ -1,18 +1,35 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
+<script>
+import Header from './components/Header.vue';
+import axios from "axios";
+
+export default {
+  data() {
+    return {
+      cards: []
+    }
+  },
+
+  components: {
+    Header
+  },
+
+  created() {
+    axios
+    .get("https://db.ygoprodeck.com/api/v7/cardinfo.php?num=10&offset=0")
+    .then((respnse) => {
+      this.cards = response.data.results;
+    })
+  }
+}
+
 </script>
 
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <HelloWorld msg="Vite + Vue" />
+
+  <Header />
+  
 </template>
 
 <style lang="scss">
+@use "./components/style.scss"
 </style>
