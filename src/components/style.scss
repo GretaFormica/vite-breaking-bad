@@ -1,3 +1,21 @@
 body{
     background-color: #d48f38;
 }
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+  
+img{
+    max-width: 100%;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 80vh;
+    background-color: white;
+    margin-top: 50px;
+}

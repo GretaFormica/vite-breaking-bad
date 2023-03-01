@@ -1,25 +1,17 @@
 <script>
 import Header from './components/Header.vue';
-import axios from "axios";
+import Main from './components/Main.vue';
 
 export default {
   data() {
     return {
-      cards: []
     }
   },
 
   components: {
-    Header
+    Header,
+    Main
   },
-
-  created() {
-    axios
-    .get("https://db.ygoprodeck.com/api/v7/cardinfo.php?num=10&offset=0")
-    .then((respnse) => {
-      this.cards = response.data.results;
-    })
-  }
 }
 
 </script>
@@ -27,6 +19,7 @@ export default {
 <template>
 
   <Header />
+  <Main />
   
 </template>
 
