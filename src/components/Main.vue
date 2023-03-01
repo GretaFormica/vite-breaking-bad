@@ -1,5 +1,5 @@
 <script>
-import Cards from './components/Cards.vue';
+import Cards from './Cards.vue';
 
 export default {
   data() {
@@ -11,13 +11,14 @@ export default {
     Cards
   },
 }
+
 </script>
 
 <template>
     
     <div class="container">
-
         <Cards />
+
 
     </div>
   
