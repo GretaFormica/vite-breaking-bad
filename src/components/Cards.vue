@@ -28,7 +28,8 @@ export default {
             <div  class="bg">
 
                 <img :src= card.card_images[0].image_url>
-                <h5 class="text-center">{{ card.name }}</h5>
+                <h5 class="text-center my-2">{{ card.name }}</h5>
+                <p class="text-center"> {{ card.race }}</p>
             </div>
         </div>
     </div>
