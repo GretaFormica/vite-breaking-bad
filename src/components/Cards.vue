@@ -20,10 +20,19 @@ export default {
       console.log("alien")
       this.url = "https://db.ygoprodeck.com/api/v7/cardinfo.php?archetype=alien"
       console.log(this.url)
+
+          axios
+        .get(this.url)
+        .then((response) => {
+            console.log(response)
+            this.cards = response.data.data;
+            // console.log(this.cards);
+
+        })
     },
 
   },
-  
+
   created() {
     axios
     .get(this.url)
