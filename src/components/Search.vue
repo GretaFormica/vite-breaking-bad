@@ -4,7 +4,6 @@
 export default {
   data() {
     return {
-      title: "Hello world"
     }
   },
 
@@ -21,10 +20,7 @@ export default {
 <template>
   <div class="container-m">
         
-        <select class="p-1">
-            <option>all</option>
-            <option @click="alien">alien</option>
-        </select>
+        <button @click="alien">search only alien</button>
 
     </div>
 </template>
@@ -33,6 +29,12 @@ export default {
 .container-m{
     max-width: 1200px;
     margin: 0 auto;
+
+    button{
+        padding: 5px;
+    }
 }
+
+
 
 </style>

@@ -14,6 +14,16 @@ export default {
     Search
   },
 
+  
+  methods: {
+    FilteredPage() {
+      console.log("alien")
+      this.url = "https://db.ygoprodeck.com/api/v7/cardinfo.php?archetype=alien"
+      console.log(this.url)
+    },
+
+  },
+  
   created() {
     axios
     .get(this.url)
@@ -21,14 +31,10 @@ export default {
         console.log(response)
         this.cards = response.data.data;
         // console.log(this.cards);
-    })
-  },
 
-  methods: {
-    FilteredPage() {
-      this.url += "?race=alien"
-    }
-  }
+    })
+
+  },
 }
 
 </script>
@@ -44,7 +50,7 @@ export default {
 
                 <img :src= card.card_images[0].image_url>
                 <h5 class="text-center my-2">{{ card.name }}</h5>
-                <p class="text-center"> {{ card.race }}</p>
+                <p class="text-center"> {{ card.archetype }}</p>
             </div>
         </div>
     </div>
